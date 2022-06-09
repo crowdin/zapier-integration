@@ -10,7 +10,7 @@ zapier.tools.env.inject();
 describe('Find - strings', () => {
   it('should return one string', async () => {
     bundle.inputData = {
-      project_id: 220,
+      project_id: process.env.TEST_PROJECT_ID,
       text: 'SGML'
     };
 

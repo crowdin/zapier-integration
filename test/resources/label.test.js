@@ -8,9 +8,9 @@ var { bundle } = require('../_bundle')
 zapier.tools.env.inject();
 
 describe('List - labels', () => {
-  it('should return the list of all labels in project #220', async () => {
+  it('should return the list of all labels in project', async () => {
     bundle.inputData = {
-      project_id: 220
+      project_id: process.env.TEST_PROJECT_ID
     };
 
     const results = await appTester(App.resources.label.list.operation.perform, bundle);

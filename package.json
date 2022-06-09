@@ -4,7 +4,7 @@
   "description": "Crowdin is a cloud-based solution that streamlines localization management for your team. It's the perfect place to effectively manage all of your multilingual content.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive -t 10000",
+    "test": "mocha --recursive -t 10000 -r dotenv/config",
     "deploy": "zapier push",
     "env": "zapier env:set 1.0.5 ${npm_config_var}=${npm_config_val}"
   },

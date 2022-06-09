@@ -8,9 +8,9 @@ var { bundle } = require('../_bundle')
 zapier.tools.env.inject();
 
 describe('List - directories', () => {
-  it('should return list of directories of the project #220', async () => {
+  it('should return list of directories of the project', async () => {
     bundle.inputData = {
-      project_id: 220
+      project_id: process.env.TEST_PROJECT_ID
     };
 
     const results = await appTester(App.resources.directory.list.operation.perform, bundle);

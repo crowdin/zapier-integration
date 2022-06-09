@@ -10,7 +10,7 @@ zapier.tools.env.inject();
 describe('List - projects', () => {
   it('should return the list of all projects', async () => {
     bundle.inputData = {
-      project_id: 220
+      project_id: process.env.TEST_PROJECT_ID
     };
 
     const results = await appTester(App.resources.project.list.operation.perform, bundle);
