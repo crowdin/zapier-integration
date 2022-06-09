@@ -11,7 +11,7 @@ module.exports = {
 
   display: {
     label: 'Remove Label From String',
-    description: 'Unasign the label from the string'
+    description: 'Unassign the label from the string'
   },
 
   operation: {

@@ -1,10 +1,8 @@
 'use strict';
 
-const crowdin = require('@crowdin/crowdin-api-client').default;
-
 const baseOauthUrl = process.env.BASE_URL;
 // To get your OAuth2 redirect URI, run `zapier describe` and update this variable.
-// Will looke like 'https://zapier.com/dashboard/auth/oauth/return/App123CLIAPI/'
+// Will look like 'https://zapier.com/dashboard/auth/oauth/return/App123CLIAPI/'
 const redirectUri = 'https://zapier.com/dashboard/auth/oauth/return/CrowdinCLIAPI/';
 
 const getAuthorizeURL = (z, bundle) => {
@@ -18,9 +16,7 @@ const getAuthorizeURL = (z, bundle) => {
 
   urlParts.push(`state=${bundle.inputData.state}`);
 
-  const finalUrl = `${url}?${urlParts.join('&')}`;
-
-  return finalUrl;
+  return `${url}?${urlParts.join('&')}`;
 }
 
 const getAccessToken = (z, bundle) => {

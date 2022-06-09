@@ -8,7 +8,7 @@ async function execute(z, bundle) {
     const file_name = bundle.inputData.file_name;
     const file_url = bundle.inputData.file_url;
     const file_contents = bundle.inputData.file_contents;
-    const auto_tag = bundle.inputData.auto_tag ? true : false
+    const auto_tag = !!bundle.inputData.auto_tag;
 
     let contents = ''
     if (file_url && file_url.length) {
