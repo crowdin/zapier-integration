@@ -65,6 +65,26 @@ Before sending your pull requests, make sure you followed the list below:
 - Ensure that there are unit tests for your code.
 - Run unit tests.
 
+##### Running tests
+
+To run tests you need an account in [Crowdin](https://accounts.crowdin.com/register) or [Crowdin Enterprise](https://accounts.crowdin.com/workspace/create)
+
+1. Generate a new Personal Access Token in your Account Settings
+2. Create a new Crowdin project or just use an existing one
+3. Setup environment variables:
+
+    ```console
+    cp .env.example .env
+    ```
+
+    Fill in the `.env` variables with your credentials. `TEST_DOMAIN` required only if you're using Crowdin Enterprise.
+
+4. Run tests:
+
+    ```console
+    npm run test
+    ```
+
 #### Philosophy of code contribution
 
 - Include unit tests when you contribute new features, as they help to a) prove that your code works correctly, and b) guard against future breaking changes to lower the maintenance cost.

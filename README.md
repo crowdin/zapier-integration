@@ -7,13 +7,11 @@ Connect Crowdin to hundreds of other apps with Zapier
 Zapier lets you connect Crowdin to 4,000+ other web services. Automated connections called Zaps, set up in minutes with no coding, can automate your day-to-day tasks and build workflows between apps that otherwise wouldn't be possible.
 Each Zap has one app as the Trigger, where your information comes from and which causes one or more Actions in other apps, where your data gets sent automatically.
 
-<p align='center'>
-
 [Integration Docs](https://store.crowdin.com/zapier) |
 [Crowdin KB](https://support.crowdin.com/) |
 [Crowdin Enterprise KB](https://support.crowdin.com/enterprise/overview/)
 
-</p>
+[![Tests](https://github.com/crowdin/zapier-integration/actions/workflows/tests.yml/badge.svg)](https://github.com/crowdin/zapier-integration/actions/workflows/tests.yml)
 
 ## Seeking Assistance
 
