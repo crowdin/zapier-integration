@@ -16,9 +16,9 @@ Each Zap has one app as the Trigger, where your information comes from and which
 
 </div>
 
-[![Zapier](https://img.shields.io/badge/dynamic/json?label=Zapier&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrowdin%2Fzapier-integration%2Fmaster%2Fpackage.json&logo=zapier)](https://zapier.com/apps/crowdin/integrations)
+[![Zapier](https://img.shields.io/badge/dynamic/json?label=Zapier&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrowdin%2Fzapier-integration%2Fmain%2Fpackage.json&logo=zapier)](https://zapier.com/apps/crowdin/integrations)
 [![Tests](https://github.com/crowdin/zapier-integration/actions/workflows/tests.yml/badge.svg)](https://github.com/crowdin/zapier-integration/actions/workflows/tests.yml)
-[![GitHub contributors](https://img.shields.io/github/contributors/crowdin/zapier-integration?cacheSeconds=10000)](https://github.com/crowdin/zapier-integration/graphs/contributors)
+[![GitHub contributors](https://img.shields.io/github/contributors/crowdin/zapier-integration?cacheSeconds=10001)](https://github.com/crowdin/zapier-integration/graphs/contributors)
 [![License](https://img.shields.io/github/license/crowdin/zapier-integration?cacheSeconds=3600)](https://github.com/crowdin/zapier-integration/blob/master/LICENSE)
 
 ## Getting started
