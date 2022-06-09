@@ -65,6 +65,12 @@ Before sending your pull requests, make sure you followed the list below:
 - Ensure that there are unit tests for your code.
 - Run unit tests.
 
+##### Forking
+
+If you want to make changes and run your own version of this integration for a test, remove the `.zapierapprc` file and create a new Zapier integration with `zapier register "My integration"` under your own Zapier account.
+
+For more details check the [Zapier Platform CLI Docs](https://platform.zapier.com/cli_docs/docs).
+
 ##### Running tests
 
 To run tests you need an account in [Crowdin](https://accounts.crowdin.com/register) or [Crowdin Enterprise](https://accounts.crowdin.com/workspace/create)
