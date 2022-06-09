@@ -1,18 +1,12 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Tests
+name: Deploy
 
 on:
   push:
-    paths-ignore:
-      - 'README.md'
-      - 'LICENSE'
-      - 'CODE_OF_CONDUCT.md'
-      - 'CONTRIBUTING.md'
-    branches: [ "*" ]
-  pull_request:
-    branches: [ "main" ]
+    tags:
+      - '*'
 
 jobs:
   build:
@@ -21,12 +15,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: create env file
-      run: |
-        touch .env
-        echo TEST_TOKEN=${{ secrets.TEST_TOKEN }} >> .env
-        echo TEST_PROJECT_ID=${{ secrets.TEST_PROJECT_ID }} >> .env
-        echo TEST_DOMAIN=${{ secrets.TEST_DOMAIN }} >> .env
     - name: Use Node.js
       uses: actions/setup-node@v3
       with:
@@ -34,4 +22,7 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm install -g zapier-platform-cli
-    - run: zapier test
+    - run: zapier validate
+    - run: zapier push
+      env:
+        ZAPIER_DEPLOY_KEY: ${{ secrets.ZAPIER_DEPLOY_KEY }}
