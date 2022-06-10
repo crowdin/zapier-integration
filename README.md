@@ -9,13 +9,13 @@ Each Zap has one app as the Trigger, where your information comes from and which
 
 <div align="center">
 
-[Home](https://zapier.com/apps/crowdin/integrations) |
-[Docs](https://store.crowdin.com/zapier) |
-[Crowdin KB](https://support.crowdin.com/) |
-[Crowdin Enterprise KB](https://support.crowdin.com/enterprise/overview/)
+[**`Home`**](https://zapier.com/apps/crowdin/integrations) &nbsp;|&nbsp;
+[**`Docs`**](https://store.crowdin.com/zapier) &nbsp;|&nbsp;
+[**`Crowdin KB`**](https://support.crowdin.com/) &nbsp;|&nbsp;
+[**`Crowdin Enterprise KB`**](https://support.crowdin.com/enterprise/overview/)
 
 </div>
-
+    
 [![Zapier](https://img.shields.io/badge/dynamic/json?label=Zapier&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrowdin%2Fzapier-integration%2Fmain%2Fpackage.json&logo=zapier)](https://zapier.com/apps/crowdin/integrations)
 [![Tests](https://github.com/crowdin/zapier-integration/actions/workflows/tests.yml/badge.svg)](https://github.com/crowdin/zapier-integration/actions/workflows/tests.yml)
 [![GitHub contributors](https://img.shields.io/github/contributors/crowdin/zapier-integration?cacheSeconds=10001)](https://github.com/crowdin/zapier-integration/graphs/contributors)
