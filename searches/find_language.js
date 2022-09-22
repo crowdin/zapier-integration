@@ -22,7 +22,7 @@ module.exports = {
       type: "string",
     }],
     perform: async (z, bundle) => {
-      const { languagesApi } = getCrowdinConnection(z, bundle);
+      const { languagesApi } = await getCrowdinConnection(z, bundle);
 
       const data = (await languagesApi.withFetchAll().listSupportedLanguages()).data.map((obj) => obj.data)
 

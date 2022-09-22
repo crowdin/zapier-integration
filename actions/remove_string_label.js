@@ -1,7 +1,7 @@
 const { projectInputField, labelsInputField, getCrowdinConnection } = require('../_shared');
 
 const perform = async (z, bundle) => {
-  const { labelsApi } = getCrowdinConnection(z, bundle);
+  const { labelsApi } = await getCrowdinConnection(z, bundle);
   return (await labelsApi.unassignLabelFromString(bundle.inputData.project_id, bundle.inputData.label_id, [bundle.inputData.string_id])).data[0]
 }
 

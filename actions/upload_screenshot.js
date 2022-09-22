@@ -2,7 +2,7 @@ const { getCrowdinConnection, projectInputField } = require('./../_shared');
 const axios = require('axios')
 
 async function execute(z, bundle) {
-    const { screenshotsApi, uploadStorageApi } = getCrowdinConnection(z, bundle);
+    const { screenshotsApi, uploadStorageApi } = await getCrowdinConnection(z, bundle);
 
     const project_id = bundle.inputData.project_id;
     const file_name = bundle.inputData.file_name;

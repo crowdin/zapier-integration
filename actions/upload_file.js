@@ -1,7 +1,7 @@
 const { projectInputField, directoriesInputField, labelsInputField, getCrowdinConnection } = require('./../_shared');
 
 async function execute(z, bundle) {
-    const { sourceFilesApi, uploadStorageApi } = getCrowdinConnection(z, bundle);
+    const { sourceFilesApi, uploadStorageApi } = await getCrowdinConnection(z, bundle);
 
     const project_id = bundle.inputData.project_id;
     const file_name = bundle.inputData.file_name;

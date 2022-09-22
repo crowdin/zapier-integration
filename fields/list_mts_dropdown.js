@@ -1,7 +1,7 @@
 const { getCrowdinConnection } = require('../_shared');
 
 const perform = async (z, bundle) => {
-  const { machineTranslationApi } = getCrowdinConnection(z, bundle);
+  const { machineTranslationApi } = await getCrowdinConnection(z, bundle);
 
   return (await machineTranslationApi.withFetchAll().listMts()).data.map((obj) => obj.data)
 };

@@ -1,7 +1,7 @@
 const { projectInputField, projectWorkflowStepField, languageInputField, filesInputField, labelsInputField, projectMembersField, getCrowdinConnection } = require('./../_shared');
 
 const performSearch = async (z, bundle) => {
-  const { tasksApi } = getCrowdinConnection(z, bundle);
+  const { tasksApi } = await getCrowdinConnection(z, bundle);
 
   if (bundle.inputData.id) {
     return (await tasksApi.withFetchAll().getTask(bundle.inputData.project_id, bundle.inputData.id)).data
@@ -13,7 +13,7 @@ const performSearch = async (z, bundle) => {
 };
 
 const performCreate = async (z, bundle) => {
-  const { tasksApi } = getCrowdinConnection(z, bundle);
+  const { tasksApi } = await getCrowdinConnection(z, bundle);
 
   let request = {
     status: 'todo',

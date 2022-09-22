@@ -1,7 +1,7 @@
 const { getCrowdinConnection } = require('./../_shared');
 
 const performSearchFile = async (z, bundle, event) => {
-    const { projectsGroupsApi, sourceFilesApi } = getCrowdinConnection(z, bundle);
+    const { projectsGroupsApi, sourceFilesApi } = await getCrowdinConnection(z, bundle);
 
     const project = (await projectsGroupsApi.getProject(bundle.inputData.project_id)).data
     const files = (await sourceFilesApi.listProjectFiles(bundle.inputData.project_id, {

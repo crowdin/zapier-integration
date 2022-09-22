@@ -4,7 +4,7 @@ const axios = require('axios')
 const { projectInputField, languageInputField, filesInputField } = require('./../_shared');
 
 async function execute(z, bundle) {
-    const { translationsApi, sourceFilesApi } = getCrowdinConnection(z, bundle);
+    const { translationsApi, sourceFilesApi } = await getCrowdinConnection(z, bundle);
 
     const project_id = bundle.inputData.project_id;
     const file_id = bundle.inputData.file_id;

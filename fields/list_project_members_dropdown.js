@@ -1,7 +1,7 @@
 const { getCrowdinConnection } = require('../_shared');
 
 const perform = async (z, bundle) => {
-  const { usersApi } = getCrowdinConnection(z, bundle);
+  const { usersApi } = await getCrowdinConnection(z, bundle);
 
   return (await usersApi.listProjectMembers(bundle.inputData.project_id)).data.map((obj) => obj.data)
 };

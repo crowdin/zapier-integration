@@ -1,7 +1,7 @@
 const { projectInputField, directoriesInputField, getCrowdinConnection } = require('./../_shared');
 
 const performList = async (z, bundle) => {
-  const { sourceFilesApi } = getCrowdinConnection(z, bundle);
+  const { sourceFilesApi } = await getCrowdinConnection(z, bundle);
 
   let request = {};
   bundle.inputData.directory_id && (request.directoryId = bundle.inputData.directory_id);
@@ -10,7 +10,7 @@ const performList = async (z, bundle) => {
 }
 
 const performSearch = async (z, bundle) => {
-  const { sourceFilesApi } = getCrowdinConnection(z, bundle);
+  const { sourceFilesApi } = await getCrowdinConnection(z, bundle);
 
   const directories = (await sourceFilesApi.withFetchAll().listProjectDirectories(bundle.inputData.project_id)).data;
 
@@ -24,7 +24,7 @@ const performSearch = async (z, bundle) => {
 }
 
 const performCreate = async (z, bundle) => {
-  const { sourceFilesApi } = getCrowdinConnection(z, bundle);
+  const { sourceFilesApi } = await getCrowdinConnection(z, bundle);
 
   let request = {
     name: bundle.inputData.name

@@ -1,7 +1,7 @@
 const { issueTypeField, issueStatusField, commentTypeField, languageInputField, projectInputField, getCrowdinConnection } = require('./../_shared');
 
 const performCreate = async (z, bundle) => {
-  const { stringCommentsApi } = getCrowdinConnection(z, bundle);
+  const { stringCommentsApi } = await getCrowdinConnection(z, bundle);
 
   let request = {};
   request.stringId = bundle.inputData.string_id;

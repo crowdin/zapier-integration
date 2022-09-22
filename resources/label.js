@@ -1,12 +1,12 @@
 const { projectInputField, getCrowdinConnection } = require('./../_shared');
 
 const performList = async (z, bundle) => {
-  const { labelsApi } = getCrowdinConnection(z, bundle);
+  const { labelsApi } = await getCrowdinConnection(z, bundle);
   return (await labelsApi.withFetchAll().listLabels(bundle.inputData.project_id)).data.map((obj) => obj.data).map((obj) => ({ ...obj, id: obj.title }))
 };
 
 const performSearch = async (z, bundle) => {
-  const { labelsApi } = getCrowdinConnection(z, bundle);
+  const { labelsApi } = await getCrowdinConnection(z, bundle);
 
   const result = (await labelsApi.withFetchAll().listLabels(bundle.inputData.project_id)).data.map((obj) => obj.data).find((label) => label.title == bundle.inputData.title);
 
@@ -14,7 +14,7 @@ const performSearch = async (z, bundle) => {
 };
 
 const performCreate = async (z, bundle) => {
-  const { labelsApi } = getCrowdinConnection(z, bundle);
+  const { labelsApi } = await getCrowdinConnection(z, bundle);
 
   let request = {
     title: bundle.inputData.title

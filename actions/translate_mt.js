@@ -1,7 +1,7 @@
 const { languageInputField, mtInputField, getCrowdinConnection } = require('./../_shared');
 
 async function execute(z, bundle) {
-    const { machineTranslationApi } = getCrowdinConnection(z, bundle);
+    const { machineTranslationApi } = await getCrowdinConnection(z, bundle);
 
     const data = (await machineTranslationApi.translate(bundle.inputData.mt_id, {
         languageRecognitionProvider: 'engine',

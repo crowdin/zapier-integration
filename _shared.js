@@ -9,7 +9,7 @@ const handleWebhook = async (z, bundle) => {
 };
 
 const subscribeToCrowdin = async (z, bundle, event) => {
-    const { webhooksApi } = getCrowdinConnection(z, bundle);
+    const { webhooksApi } = await getCrowdinConnection(z, bundle);
 
     return (await webhooksApi.addWebhook(bundle.inputData.project_id, {
         url: bundle.targetUrl,
@@ -21,7 +21,7 @@ const subscribeToCrowdin = async (z, bundle, event) => {
 }
 
 const performUnsubscribe = async (z, bundle) => {
-    const { webhooksApi } = getCrowdinConnection(z, bundle);
+    const { webhooksApi } = await getCrowdinConnection(z, bundle);
 
     return (await webhooksApi.deleteWebhook(bundle.inputData.project_id, bundle.subscribeData.id)).data
 }
@@ -164,8 +164,8 @@ const commentTypeField = {
     altersDynamicFields: false,
 }
 
-const getCrowdinConnection = (z, bundle) => {
-    return new crowdin({
+const getCrowdinConnection = async (z, bundle) => {
+    const crowdinApi = new crowdin({
         token: bundle.authData.access_token,
         organization: bundle.authData.domain
     }, {
@@ -180,7 +180,19 @@ const getCrowdinConnection = (z, bundle) => {
                 }
             }]
         }
-    })
+    });
+
+    const { languagesApi } = crowdinApi;
+
+    // Test connection. Get one language to verify we're good to go.
+    try {
+        (await languagesApi.listSupportedLanguages(1)).data
+    } catch (e) {
+        //TODO: well, we should better test what went wrong, but most common problem would be expired token
+        throw new z.errors.RefreshAuthError();
+    }
+
+    return crowdinApi;
 }
 
 module.exports = {

@@ -1,13 +1,13 @@
 const { workflowInputField, languageInputField, projectInputField, vendorInputField, getCrowdinConnection } = require('./../_shared');
 
 const performList = async (z, bundle) => {
-  const { projectsGroupsApi } = getCrowdinConnection(z, bundle);
+  const { projectsGroupsApi } = await getCrowdinConnection(z, bundle);
 
   return (await projectsGroupsApi.withFetchAll().listProjects()).data.map((obj) => obj.data)
 };
 
 const performSearch = async (z, bundle) => {
-  const { projectsGroupsApi } = getCrowdinConnection(z, bundle);
+  const { projectsGroupsApi } = await getCrowdinConnection(z, bundle);
 
   const data = (await projectsGroupsApi.withFetchAll().listProjects()).data.map((obj) => obj.data)
 
@@ -21,7 +21,7 @@ const performSearch = async (z, bundle) => {
 };
 
 const performCreate = async (z, bundle) => {
-  const { projectsGroupsApi } = getCrowdinConnection(z, bundle);
+  const { projectsGroupsApi } = await getCrowdinConnection(z, bundle);
 
   let request = {
     name: bundle.inputData.name,

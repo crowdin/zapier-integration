@@ -1,7 +1,7 @@
 const { getCrowdinConnection } = require('./../_shared');
 
 const performSearchProject = async (z, bundle, event) => {
-    const { projectsGroupsApi } = getCrowdinConnection(z, bundle);
+    const { projectsGroupsApi } = await getCrowdinConnection(z, bundle);
 
     const project = (await projectsGroupsApi.getProject(bundle.inputData.project_id)).data
 

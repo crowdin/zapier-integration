@@ -1,7 +1,7 @@
 const { getCrowdinConnection } = require('../_shared');
 
 const perform = async (z, bundle) => {
-  const { languagesApi } = getCrowdinConnection(z, bundle);
+  const { languagesApi } = await getCrowdinConnection(z, bundle);
   return (await languagesApi.withFetchAll().listSupportedLanguages()).data.map((obj) => obj.data)
 };
 

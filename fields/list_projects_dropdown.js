@@ -1,7 +1,7 @@
 const { getCrowdinConnection } = require('../_shared');
 
 const perform = async (z, bundle) => {
-  const { projectsGroupsApi } = getCrowdinConnection(z, bundle);
+  const { projectsGroupsApi } = await getCrowdinConnection(z, bundle);
 
   return (await projectsGroupsApi.withFetchAll().listProjects({
     hasManagerAccess: 1

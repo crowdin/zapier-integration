@@ -6,7 +6,7 @@ const perform = async (z, bundle) => {
     return [{ id: 0, title: 'Default for crowdin.com' }]
   }
 
-  const { vendorsApi } = getCrowdinConnection(z, bundle);
+  const { vendorsApi } = await getCrowdinConnection(z, bundle);
 
   return (await vendorsApi.withFetchAll().listVendors()).data.map((obj) => obj.data)
 };

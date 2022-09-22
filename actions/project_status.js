@@ -1,7 +1,7 @@
 const { projectInputField, getCrowdinConnection } = require('./../_shared');
 
 const perform = async (z, bundle) => {
-  const { translationStatusApi, languagesApi } = getCrowdinConnection(z, bundle);
+  const { translationStatusApi, languagesApi } = await getCrowdinConnection(z, bundle);
 
   const languages = (await languagesApi.withFetchAll().listSupportedLanguages()).data
 

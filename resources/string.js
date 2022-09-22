@@ -1,7 +1,7 @@
 const { projectInputField, filesInputField, labelsInputField, getCrowdinConnection } = require('./../_shared');
 
 const performSearch = async (z, bundle) => {
-  const { sourceStringsApi } = getCrowdinConnection(z, bundle);
+  const { sourceStringsApi } = await getCrowdinConnection(z, bundle);
   const strings = (await sourceStringsApi.withFetchAll().listProjectStrings(bundle.inputData.project_id)).data.map((obj) => obj.data)
 
   if (bundle.inputData.text) {
@@ -20,7 +20,7 @@ const performSearch = async (z, bundle) => {
 };
 
 const performCreate = async (z, bundle) => {
-  const { sourceStringsApi } = getCrowdinConnection(z, bundle);
+  const { sourceStringsApi } = await getCrowdinConnection(z, bundle);
 
   let request = {
     text: bundle.inputData.text,

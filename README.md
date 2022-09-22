@@ -96,6 +96,20 @@ Need help working with Crowdin Zapier Integration or have any questions? [Contac
 
 If you want to contribute please read the [Contributing](/CONTRIBUTING.md) guidelines.
 
+It's very easy to get started with these 3 steps:
+ - Clone this project to your local machine.
+ - Open terminal and cd into the cloned folder, usually `cd zapier-integration`.
+ - Run `npm install` to install dependencies.
+ - `cp .env.example .env` and put your Crowdin OAuth credentials and Personal API Token for tests.
+ - run `zapier test` to run local tests and see if you are ready to proceed with development.
+ - run `zapier push` to push your local changes to your own Zapier account.
+ - make sure to increase `package.json` version when delivering your improvements.
+
+You might want to check a `z` object to see it's methods. `z.console.log` stands for `console.log` for example.
+
+Note that you will need additional a `zapier` CLI installed.
+
+
 ## License
 
 <pre>
