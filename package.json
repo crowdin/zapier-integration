@@ -1,6 +1,6 @@
 {
   "name": "crowdin",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Crowdin is a cloud-based solution that streamlines localization management for your team. It's the perfect place to effectively manage all of your multilingual content.",
   "main": "index.js",
   "scripts": {
