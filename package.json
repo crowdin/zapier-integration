@@ -13,7 +13,7 @@
     "npm": ">=9.0.0"
   },
   "dependencies": {
-    "@crowdin/crowdin-api-client": "^1.18.1",
+    "@crowdin/crowdin-api-client": "1.24.0",
     "axios": "^0.27.2",
     "zapier-platform-core": "12.0.3"
   },
