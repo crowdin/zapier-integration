@@ -107,6 +107,5 @@ module.exports = {
     label: 'Comment/Issue Updated',
     description: 'Triggers when a user updates a comment or an issue.',
     hidden: false,
-    important: false,
   }
 }

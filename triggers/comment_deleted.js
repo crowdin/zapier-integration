@@ -107,6 +107,5 @@ module.exports = {
     label: 'Comment/Issue Deleted',
     description: 'Triggers when a user deletes a comment or an issue.',
     hidden: false,
-    important: false,
   }
 }

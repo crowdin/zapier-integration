@@ -44,6 +44,5 @@ module.exports = {
     label: 'Find File',
     description: 'Finds file by id or name.',
     hidden: false,
-    important: false,
   },
 };

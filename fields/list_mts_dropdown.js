@@ -14,6 +14,5 @@ module.exports = {
     label: 'List Machine Translation Engines',
     description: 'Returns a list of machine translation engines.',
     hidden: true,
-    important: false,
   }
 }

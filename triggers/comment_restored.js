@@ -107,6 +107,5 @@ module.exports = {
     label: 'Comment/Issue Restored',
     description: 'Triggers when a user restores a deleted comment or an issue.',
     hidden: false,
-    important: false,
   }
 }

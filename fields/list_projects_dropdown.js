@@ -16,6 +16,5 @@ module.exports = {
     label: 'List Projects',
     description: 'Returns a list of user projects.',
     hidden: true,
-    important: false,
   }
 }

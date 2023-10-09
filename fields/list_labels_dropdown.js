@@ -14,6 +14,5 @@ module.exports = {
     label: 'List Labels',
     description: 'Returns a list of project labels.',
     hidden: true,
-    important: false,
   }
 }

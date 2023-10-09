@@ -28,7 +28,6 @@ const uploadFile = {
     noun: "Download Translated File",
     display: {
         hidden: false,
-        important: true,
         description: "Downloads the translated file.",
         label: "Download Translated File"
     },

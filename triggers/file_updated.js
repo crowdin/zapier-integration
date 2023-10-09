@@ -31,6 +31,5 @@ module.exports = {
     label: 'File Updated',
     description: 'Triggers when a file has been updated.',
     hidden: false,
-    important: false,
   }
 }

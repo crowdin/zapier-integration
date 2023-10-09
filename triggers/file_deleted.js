@@ -31,6 +31,5 @@ module.exports = {
     label: 'File Deleted',
     description: 'Triggers when a file has been deleted from the project.',
     hidden: false,
-    important: false,
   }
 }

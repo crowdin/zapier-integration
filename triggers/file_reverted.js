@@ -31,6 +31,5 @@ module.exports = {
     label: 'File Reverted',
     description: 'Triggers when a file update has been reverted.',
     hidden: false,
-    important: false,
   }
 }

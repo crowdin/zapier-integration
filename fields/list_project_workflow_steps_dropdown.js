@@ -19,6 +19,5 @@ module.exports = {
     label: 'List Project Workflow Steps',
     description: 'Returns a list of project workflow steps.',
     hidden: true,
-    important: false,
   }
 }
