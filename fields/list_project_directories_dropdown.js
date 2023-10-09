@@ -16,6 +16,5 @@ module.exports = {
     label: 'List Directories',
     description: 'Returns a list of project directories.',
     hidden: true,
-    important: false,
   }
 }

@@ -22,6 +22,5 @@ module.exports = {
     label: 'Project Language Translated',
     description: 'Triggers when one of a project languages is fully translated.',
     hidden: false,
-    important: true,
   }
 };

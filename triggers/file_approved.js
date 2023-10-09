@@ -24,6 +24,5 @@ module.exports = {
     label: 'File Approved',
     description: 'Triggers when a file is fully translated and approved.',
     hidden: false,
-    important: true,
   }
 }

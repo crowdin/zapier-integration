@@ -14,6 +14,5 @@ module.exports = {
     label: 'List Files',
     description: 'Returns a list of project files.',
     hidden: true,
-    important: false,
   }
 }

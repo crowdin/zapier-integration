@@ -186,7 +186,7 @@ const getCrowdinConnection = async (z, bundle) => {
 
     // Test connection. Get one language to verify we're good to go.
     try {
-        (await languagesApi.listSupportedLanguages(1)).data
+        (await languagesApi.listSupportedLanguages({limit: 1})).data
     } catch (e) {
         //TODO: well, we should better test what went wrong, but most common problem would be expired token
         throw new z.errors.RefreshAuthError();

@@ -67,6 +67,5 @@ module.exports = {
     label: 'Find Language',
     description: 'Finds language by Crowdin code, locale or name.',
     hidden: false,
-    important: false,
   },
 };

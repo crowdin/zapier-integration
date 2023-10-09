@@ -19,6 +19,5 @@ module.exports = {
     label: 'List Vendors',
     description: 'Returns a list of organization vendors.',
     hidden: true,
-    important: false,
   }
 }

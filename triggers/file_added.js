@@ -31,6 +31,5 @@ module.exports = {
     label: 'File Added',
     description: 'Triggers when a new file has been added to the project.',
     hidden: false,
-    important: false,
   }
 }

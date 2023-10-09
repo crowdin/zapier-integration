@@ -13,6 +13,5 @@ module.exports = {
     label: 'List Languages',
     description: 'Returns a list of Crowdin languages.',
     hidden: true,
-    important: false,
   }
 }

@@ -45,7 +45,6 @@ module.exports = {
     display: {
       label: 'New Directory',
       description: 'Triggers when new directory is created.',
-      important: false
     },
     operation: {
       perform: performList,
@@ -61,7 +60,6 @@ module.exports = {
     display: {
       label: 'Find Directory',
       description: 'Finds a directory.',
-      important: true
     },
     operation: {
       inputFields: [projectInputField,

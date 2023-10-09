@@ -28,7 +28,6 @@ module.exports = {
     noun: "Translation",
     display: {
         hidden: false,
-        important: false,
         description: "Auto detect source language and translate with selected MT engine.",
         label: "Translate via Machine Translation"
     },

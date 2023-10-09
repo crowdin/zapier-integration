@@ -51,7 +51,6 @@ const uploadFile = {
     noun: "File",
     display: {
         hidden: false,
-        important: false,
         description: "Uploads a file into Crowdin project.",
         label: "Create or Update a File"
     },

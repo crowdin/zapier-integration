@@ -45,7 +45,6 @@ const uploadFile = {
     noun: "Upload Screenshot",
     display: {
         hidden: false,
-        important: false,
         description: "Adds a screenshot to Crowdin project and tags it automatically (optional).",
         label: "Upload Screenshot"
     },

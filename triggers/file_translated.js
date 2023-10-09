@@ -24,6 +24,5 @@ module.exports = {
     label: 'File Translated',
     description: 'Triggers when a file is fully translated.',
     hidden: false,
-    important: true,
   }
 }

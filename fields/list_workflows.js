@@ -19,6 +19,5 @@ module.exports = {
     label: 'List Workflows',
     description: 'Returns a list of user workflows.',
     hidden: true,
-    important: false,
   }
 }
