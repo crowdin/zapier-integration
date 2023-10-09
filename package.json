@@ -9,8 +9,8 @@
     "env": "zapier env:set 1.0.5 ${npm_config_var}=${npm_config_val}"
   },
   "engines": {
-    "node": ">=v14",
-    "npm": ">=5.6.0"
+    "node": ">=v18",
+    "npm": ">=9.0.0"
   },
   "dependencies": {
     "@crowdin/crowdin-api-client": "^1.18.1",
