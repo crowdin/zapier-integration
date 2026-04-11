@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@crowdin/crowdin-api-client": "1.28.2",
-    "axios": "^1.12.1",
+    "axios": "^1.15.0",
     "zapier-platform-core": "15.4.1"
   },
   "devDependencies": {
